@@ -1,0 +1,19 @@
+{
+  "name": "Tailwind v4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serves-bak": "browser-sync start --server --files './' --startPath '/' --no-ghost-mode & sass --watch static/scss/:static/css/",
+    "dev": "browser-sync start --no-scroll --port 3000 --server --startPath '/'",
+    "sass": "sass --watch static/scss/:static/css/",
+    "serves": "browser-sync start --port 3000 --server --no-scroll --startPath '/static/' --no-ghost-mode",
+    "serves files": "browser-sync start --port 3000 --server --directory --files --no-scroll --startPath '/static/index.html' --no-ghost-mode",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build:css": "tailwindcss -i ./src/tailwind-source.css -o ./src/tailwind-test.css"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}
